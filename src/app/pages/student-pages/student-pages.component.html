@@ -1,11 +1,13 @@
 <div class="p-5">
-
-
-    <h2>studentsApproved</h2>
+    <p>Valor del padre: {{debeMostrarModal}}</p>
+    <app-my-modal [(visible)]="debeMostrarModal" />
+    <button class="btn btn-primary" (click)="debeMostrarModal=true">Abrir modal</button>
+    <h2 #titulosAprobados>Aprobados:</h2>
     <app-students-list (remove)="onRemove($event,'studentsApproved')" [students]="studentsApproved" />
     <div class="my-5">
         <hr>
     </div>
-    <h2>studentsApproved</h2>
-    <app-students-list (remove)="onRemove($event,'studentsReproved')"[students]="studentsReproved" />
+    <h2>Desaprobados:</h2>
+    <app-students-list (remove)="onRemove($event,'studentsReproved')" [students]="studentsReproved" />
+    <button mostrarModal="true">Abrir Modal</button>
 </div>
