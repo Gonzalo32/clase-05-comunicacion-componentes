@@ -1,0 +1,11 @@
+<div class="p-5">
+
+
+    <h2>studentsApproved</h2>
+    <app-students-list (remove)="onRemove($event,'studentsApproved')" [students]="studentsApproved" />
+    <div class="my-5">
+        <hr>
+    </div>
+    <h2>studentsApproved</h2>
+    <app-students-list (remove)="onRemove($event,'studentsReproved')"[students]="studentsReproved" />
+</div>
